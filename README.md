@@ -1,7 +1,7 @@
 # Project-01
 
-# Your Name
+# Liam Szudy
 
-# Your Github username
+# TheRealMoeMasterful
 
 # List the things you added for points
