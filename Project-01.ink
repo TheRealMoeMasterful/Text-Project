@@ -22,6 +22,7 @@ VAR time = 1 // 0 = Dawn, 1 = Morning, 2 = Afternoon, 3 = Evening, 4 = Night
 
 //DIALOGUE
 
+/* 
 ==Sleep==
 You lay back on the soft sand and your eyes begin to close. You are fast asleep. When do you wake up?
     * [Afternoon]
@@ -39,7 +40,12 @@ You lay back on the soft sand and your eyes begin to close. You are fast asleep.
     * [The next morning]
       By the time you wake up, the sun is... peeking over the horizon again? It must be the next morning.
       ~time = 0
-        -> Seashore
+        -> Seashore */
+        
+==Sleep==
+You fall asleep in the sand.
+By the time you wake up, it is {&sunrise|morning|afternoon|sunset|night}
+-> Seashore
 
 ==Woman_1==
 "Hello. Aplogies for my intrusion."
@@ -118,7 +124,7 @@ You pick up the black feather. A crow caws in the distance. It startles you. You
     You are on a sandy beach. The ocean waves are softly lapping at the shore. No one else is around.
     ->Seashore
 
-    *[Go to sleep]
+    +[Go to sleep]
     {not Feather: -> Sleep}
     {Feather: -> Death}
 
